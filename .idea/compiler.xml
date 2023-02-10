@@ -3,6 +3,9 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="Multi_Module_Calorie_Tracker.app" target="11" />
+      <module name="Multi_Module_Calorie_Tracker.buildSrc" target="11" />
+      <module name="Multi_Module_Calorie_Tracker.buildSrc.main" target="11" />
+      <module name="Multi_Module_Calorie_Tracker.buildSrc.test" target="11" />
       <module name="Multi_Module_Calorie_Tracker.core" target="11" />
       <module name="Multi_Module_Calorie_Tracker.onboarding.onboarding_domain" target="11" />
       <module name="Multi_Module_Calorie_Tracker.onboarding.onboarding_presentation" target="11" />

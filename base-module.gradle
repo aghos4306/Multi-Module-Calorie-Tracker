@@ -1,29 +1,20 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-    id 'kotlin-parcelize'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
 
 android {
-    compileSdk = ProjectConfig.compileSdk
+    compileSdk ProjectConfig.compileSdk
 
     defaultConfig {
+        minSdk ProjectConfig.minSdk
+        targetSdk ProjectConfig.targetSdk
+        versionCode ProjectConfig.versionCode
+        versionName ProjectConfig.versionName
 
-        applicationId = ProjectConfig.appId
-        minSdk = ProjectConfig.minSdk
-        targetSdk = ProjectConfig.targetSdk
-        versionCode = ProjectConfig.versionCode
-        versionName = ProjectConfig.versionName
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
-
-        vectorDrawables {
-            useSupportLibrary = true
-        }
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -39,25 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion Compose.composeCompilerVersion
-    }
 }
 
 dependencies {
-    implementation Compose.compiler
-    implementation Compose.ui
-    implementation Compose.uiToolingPreview
-    implementation Compose.hiltNavigationCompose
-    implementation Compose.material
-    implementation Compose.runtime
-    implementation Compose.navigation
-    implementation Compose.viewModelCompose
-    implementation Compose.activityCompose
-
     kapt DaggerHilt.hiltCompiler
     implementation DaggerHilt.hiltAndroid
 
@@ -79,7 +54,4 @@ dependencies {
     androidTestImplementation Testing.mockk
     androidTestImplementation Testing.mockWebServer
     androidTestImplementation Testing.hiltTesting
-
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.0.9")
-
 }
