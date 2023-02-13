@@ -24,7 +24,7 @@ fun SelectableButton(
     selectedTextColor: androidx.compose.ui.graphics.Color,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    textStyle: TextStyle = MaterialTheme.typography.button
+    textStyle: TextStyle = MaterialTheme.typography.button,
 ) {
     Box(
         contentAlignment = Alignment.Center,

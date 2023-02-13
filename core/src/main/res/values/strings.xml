@@ -2,5 +2,8 @@
     <string name="app_name">Multi Module Calorie Tracker</string>
     <string name="welcome_text">Welcome to the app. Pls follow the prompts below…</string>
     <string name="next">Next</string>
+    <string name="select_gender">What is your gender?</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
 
 </resources>
