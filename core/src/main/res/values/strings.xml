@@ -5,5 +5,8 @@
     <string name="select_gender">What is your gender?</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="error_age_cant_be_empty">Please fill in int value for age…</string>
+    <string name="input_age">What is your age pls…</string>
+    <string name="years">Years</string>
 
 </resources>
