@@ -16,6 +16,8 @@ import com.aghogho.multimodulecalorietracker.navigation.navigate
 import com.aghogho.multimodulecalorietracker.ui.theme.MultiModuleCalorieTrackerTheme
 import com.aghogho.onboarding_presentation.age.AgeScreen
 import com.aghogho.onboarding_presentation.gender.GenderScreen
+import com.aghogho.onboarding_presentation.height.HeightScreen
+import com.aghogho.onboarding_presentation.weight.WeightScreen
 import com.aghogho.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -48,9 +50,18 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.HEIGHT) {
-
+                            HeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.WEIGHT) {
+                            WeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
+                        }
+                        composable(Route.ACTIVITY) {
 
                         }
                         composable(Route.NUTRIENT_GOAL) {
