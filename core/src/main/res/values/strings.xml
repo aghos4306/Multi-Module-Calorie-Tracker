@@ -3,6 +3,7 @@
     <string name="welcome_text">Welcome to the app. Pls follow the prompts below…</string>
     <string name="next">Next</string>
     <string name="select_gender">What is your gender?</string>
+    <string name="activity_level">What is your activity level?</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="error_weight_cant_be_empty">Please fill in int value for weight…</string>
@@ -12,6 +13,9 @@
     <string name="years">Years</string>
     <string name="height_unit">cm</string>
     <string name="weight_unit">kg</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
     <string name="input_height">What is your height pls…</string>
     <string name="input_weight">What is your weight pls…</string>
 

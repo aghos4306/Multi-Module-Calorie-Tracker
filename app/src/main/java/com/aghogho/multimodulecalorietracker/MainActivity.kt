@@ -14,6 +14,7 @@ import androidx.navigation.compose.rememberNavController
 import com.aghogho.core.navigation.Route
 import com.aghogho.multimodulecalorietracker.navigation.navigate
 import com.aghogho.multimodulecalorietracker.ui.theme.MultiModuleCalorieTrackerTheme
+import com.aghogho.onboarding_presentation.activity.ActivityScreen
 import com.aghogho.onboarding_presentation.age.AgeScreen
 import com.aghogho.onboarding_presentation.gender.GenderScreen
 import com.aghogho.onboarding_presentation.height.HeightScreen
@@ -62,7 +63,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.ACTIVITY) {
-
+                            ActivityScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.NUTRIENT_GOAL) {
 
