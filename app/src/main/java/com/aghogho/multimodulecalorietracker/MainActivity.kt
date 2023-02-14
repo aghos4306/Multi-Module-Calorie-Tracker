@@ -17,6 +17,7 @@ import com.aghogho.multimodulecalorietracker.ui.theme.MultiModuleCalorieTrackerT
 import com.aghogho.onboarding_presentation.activity.ActivityScreen
 import com.aghogho.onboarding_presentation.age.AgeScreen
 import com.aghogho.onboarding_presentation.gender.GenderScreen
+import com.aghogho.onboarding_presentation.goal.GoalScreen
 import com.aghogho.onboarding_presentation.height.HeightScreen
 import com.aghogho.onboarding_presentation.weight.WeightScreen
 import com.aghogho.onboarding_presentation.welcome.WelcomeScreen
@@ -65,10 +66,10 @@ class MainActivity : ComponentActivity() {
                         composable(Route.ACTIVITY) {
                             ActivityScreen(onNavigate = navController::navigate)
                         }
-                        composable(Route.NUTRIENT_GOAL) {
-
-                        }
                         composable(Route.GOAL) {
+                            GoalScreen(onNavigate = navController::navigate)
+                        }
+                        composable(Route.NUTRIENT_GOAL) {
 
                         }
                         composable(Route.TRACKER_OVERVIEW) {

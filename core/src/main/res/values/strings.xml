@@ -19,4 +19,9 @@
     <string name="input_height">What is your height pls…</string>
     <string name="input_weight">What is your weight pls…</string>
 
+    <string name="loose_keep_or_gain_weight">Do you wish to loose, keep or gain weight ?</string>
+    <string name="loose_weight">Loose</string>
+    <string name="keep_weight">Keep</string>
+    <string name="gain_weight">Gain</string>
+
 </resources>
