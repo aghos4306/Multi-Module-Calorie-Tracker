@@ -63,7 +63,9 @@ fun GoalScreen(
                         fontWeight = FontWeight.Normal
                     )
                 )
+
                 Spacer(modifier = Modifier.width(spacing.spaceMedium))
+
                 SelectableButton(
                     text = stringResource(id = R.string.keep_weight),
                     isSelected = viewModel.selectedGoal is GoalType.KeepWeight,
@@ -74,7 +76,9 @@ fun GoalScreen(
                         fontWeight = FontWeight.Normal
                     )
                 )
+
                 Spacer(modifier = Modifier.width(spacing.spaceMedium))
+                
                 SelectableButton(
                     text = stringResource(id = R.string.gain_weight),
                     isSelected = viewModel.selectedGoal is GoalType.GainWeight,
