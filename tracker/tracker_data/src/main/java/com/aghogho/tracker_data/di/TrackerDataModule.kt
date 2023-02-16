@@ -2,9 +2,12 @@ package com.aghogho.tracker_data.di
 
 import android.app.Application
 import androidx.room.Room
+import com.aghogho.tracker_data.local.TrackerDao
 import com.aghogho.tracker_data.local.TrackerDatabase
 import com.aghogho.tracker_data.remote.OpenFoodApi
 import com.aghogho.tracker_data.remote.OpenFoodApi.Companion.OPEN_FOOD_SEARCH_BASE_URL
+import com.aghogho.tracker_data.repository.TrackerRepositoryImpl
+import com.aghogho.tracker_domain.repository.TrackerRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -49,6 +52,18 @@ class TrackerDataModule {
             TrackerDatabase::class.java,
             "tracker_db"
         ).build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideTrackerFoodRepository(
+        api: OpenFoodApi,
+        db: TrackerDatabase
+    ): TrackerRepository {
+        return TrackerRepositoryImpl(
+            dao = db.dao,
+            api = api
+        )
     }
 
 }
