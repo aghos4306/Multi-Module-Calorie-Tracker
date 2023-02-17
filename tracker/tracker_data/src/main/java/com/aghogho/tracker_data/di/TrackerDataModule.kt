@@ -35,6 +35,8 @@ class TrackerDataModule {
             .build()
     }
 
+    @Provides
+    @Singleton
     fun provideOpenFoodApi(client: OkHttpClient): OpenFoodApi {
         return Retrofit.Builder()
             .baseUrl(OPEN_FOOD_SEARCH_BASE_URL)
