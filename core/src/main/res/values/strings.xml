@@ -36,4 +36,6 @@
     <string name="dinner">Dinner</string>
     <string name="snack">Snack</string>
 
+    <string name="gram_unit">g</string>
+
 </resources>
