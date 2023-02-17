@@ -28,8 +28,12 @@
     <string name="percent_protein">%</string>
     <string name="percent_fat">%</string>
 
-
     <string name="error_invalid_value_entered">Please ensure that you are entering the correct value or the field is not empty</string>
     <string name="error_nutrient_sum">Please ensure that the sum of all nutrients is 100%</string>
+
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="snack">Snack</string>
 
 </resources>
