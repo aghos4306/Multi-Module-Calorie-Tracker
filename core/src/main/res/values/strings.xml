@@ -50,8 +50,11 @@
     <string name="yesterday">Yesterday</string>
     <string name="tomorrow">Tomorrow</string>
 
-    <string name="add_meal">Add</string>
+    <string name="add_meal">Add %s</string>
     <string name="collapse">Collapse</string>
     <string name="expand">Expand</string>
+    <string name="delete">Delete</string>
+
+    <string name="nutrient_info">%dg • %dkcal</string>
 
 </resources>
