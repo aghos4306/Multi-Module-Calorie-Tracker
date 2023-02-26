@@ -59,5 +59,8 @@
     <string name="search">Searching...</string>
 
     <string name="nutrient_info">%dg • %dkcal</string>
+    <string name="kcal_per_100g">%dkcal / 100g</string>
+    <string name="track">Track</string>
+    <string name="no_results">No results</string>
 
 </resources>
