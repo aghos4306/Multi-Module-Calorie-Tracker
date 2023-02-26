@@ -1,4 +1,4 @@
-package com.aghogho.core.navigation
+package com.aghogho.multimodulecalorietracker.navigation
 
 object Route {
     const val WELCOME = "welcome"

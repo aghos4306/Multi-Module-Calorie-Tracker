@@ -7,10 +7,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aghogho.core.domain.preferences.Preferences
 import com.aghogho.core.domain.use_case.FilterOutDigits
-import com.aghogho.core.navigation.Route
 import com.aghogho.core.util.UiEvent
 import com.aghogho.core.util.UiText
-import com.aghogho.onboarding_presentation.R
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
@@ -47,7 +45,7 @@ class HeightViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveHeight(heightNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.WEIGHT))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 }

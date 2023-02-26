@@ -29,7 +29,7 @@ fun NutrientsHeader(
         targetValue = state.totalCalories
     )
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .clip(
                 RoundedCornerShape(

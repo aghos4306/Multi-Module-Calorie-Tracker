@@ -19,21 +19,12 @@ import com.aghogho.tracker_presentation.components.NutrientsHeader
 
 @Composable
 fun TrackerOverviewScreen(
-    onNavigate: (UiEvent.Navigate) -> Unit,
+    onNavigateToSearch: (String, Int, Int, Int) -> Unit,
     viewModel: TrackerOverviewViewModel = hiltViewModel()
 ) {
     val spacing = LocalSpacing.current
     val state = viewModel.state
     val context = LocalContext.current
-
-    LaunchedEffect(key1 = context ) {
-        viewModel.uiEvent.collect { event ->
-            when(event) {
-                is UiEvent.Navigate -> onNavigate(event)
-                else -> Unit
-            }
-        }
-    }
 
     LazyColumn(
         modifier = Modifier
@@ -86,9 +77,13 @@ fun TrackerOverviewScreen(
                                     meal.name.asString(context)
                                 ),
                                 onClick = {
-                                    viewModel.onEvent(
-                                        TrackerOverviewEvent.OnAddFoodClick(meal)
+                                    onNavigateToSearch(
+                                        meal.name.asString(context),
+                                        state.date.dayOfMonth,
+                                        state.date.monthValue,
+                                        state.date.year
                                     )
+
                                 },
                                 modifier = Modifier.fillMaxWidth()
                             )
