@@ -13,6 +13,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.aghogho.core.domain.preferences.Preferences
 import com.aghogho.core.navigation.Route
 import com.aghogho.multimodulecalorietracker.navigation.navigate
 import com.aghogho.multimodulecalorietracker.ui.theme.MultiModuleCalorieTrackerTheme
@@ -27,11 +28,17 @@ import com.aghogho.onboarding_presentation.welcome.WelcomeScreen
 import com.aghogho.tracker_presentation.search.components.SearchScreen
 import com.aghogho.tracker_presentation.tracker_overview.TrackerOverviewScreen
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var preferences: Preferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val shouldShowOnboarding = preferences.loadShouldShowOnboarding()
         setContent {
             MultiModuleCalorieTrackerTheme {
                 val navController = rememberNavController()
@@ -42,7 +49,12 @@ class MainActivity : ComponentActivity() {
                 ) {
                     NavHost(
                         navController = navController,
-                        startDestination = Route.WELCOME
+                        //startDestination = Route.WELCOME
+                        startDestination = if (shouldShowOnboarding) {
+                            Route.WELCOME
+                        } else {
+                            Route.TRACKER_OVERVIEW
+                        }
                     ) {
                         composable(Route.WELCOME) {
                             WelcomeScreen(onNavigate = navController::navigate)         //ensure this is UiEvent navigate
