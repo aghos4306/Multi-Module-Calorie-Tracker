@@ -15,7 +15,8 @@ android {
         versionCode = ProjectConfig.versionCode
         versionName = ProjectConfig.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        //testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.aghogho.multimodulecalorietracker.HiltTestRunner"
 
         vectorDrawables {
             useSupportLibrary = true
@@ -100,6 +101,9 @@ dependencies {
     androidTestImplementation(Testing.mockk)
     androidTestImplementation(Testing.mockWebServer)
     androidTestImplementation(Testing.hiltTesting)
+    kaptAndroidTest(DaggerHilt.hiltCompiler)
+    androidTestImplementation(Testing.testRunner)
+
 
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.0.9")
 
