@@ -29,7 +29,7 @@ fun AddButton(
     Row(
         modifier = modifier
             .clip(RoundedCornerShape(100f))
-            .clickable { onClick }
+            .clickable { onClick() }
             .border(
                 width = 1.dp,
                 color = color,
