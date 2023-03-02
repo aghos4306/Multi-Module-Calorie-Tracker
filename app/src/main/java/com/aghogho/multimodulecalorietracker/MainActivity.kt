@@ -48,12 +48,12 @@ class MainActivity : ComponentActivity() {
                 ) {
                     NavHost(
                         navController = navController,
-                        //startDestination = Route.WELCOME
-                        startDestination = if (shouldShowOnboarding) {
-                            Route.WELCOME
-                        } else {
-                            Route.TRACKER_OVERVIEW
-                        }
+                        startDestination = Route.WELCOME
+//                        startDestination = if (shouldShowOnboarding) {
+//                            Route.WELCOME
+//                        } else {
+//                            Route.TRACKER_OVERVIEW
+//                        }
                     ) {
                         composable(Route.WELCOME) {
                             WelcomeScreen(onNextClick = {

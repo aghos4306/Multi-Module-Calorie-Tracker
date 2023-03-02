@@ -66,7 +66,7 @@ fun ExpandableMeal(
                         contentDescription = if (meal.isExpanded) {
                             stringResource(id = R.string.collapse)
                         } else {
-                            stringResource(id = R.string.collapse)
+                            stringResource(id = R.string.expand)
                         }
                     )
                 }
